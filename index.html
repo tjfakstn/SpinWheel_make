@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>경화's 돌림판</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- STEP 1 -->
+<div id="step1" class="step">
+    <h1>룰렛 선택지 개수를 정해주세요.</h1>
+
+    <p class="guide-text">2개 ~ 10개</p>
+
+    <div id="countControl">
+        <button id="btnMinus">-</button>
+        <span id="itemCount">6</span>
+        <button id="btnPlus">+</button>
+    </div>
+
+    <button id="btnStart" class="main-btn">시작하기</button>
+</div>
+
+
+<!-- STEP 2 -->
+<div id="step2" class="step hidden">
+    <h1>항목을 입력해주세요.</h1>
+
+    <div id="wheelContainer">
+        <canvas id="wheelCanvas" width="400" height="400"></canvas>
+        <div id="labelsContainer"></div>
+    </div>
+
+    <div class="step2-buttons">
+        <button id="backBtn" class="main-btn">뒤로가기</button>
+        <button id="spinBtn" class="main-btn">돌리기</button>
+    </div>
+</div>
+
+<!-- STEP 3 -->
+<div id="step3" class="step hidden">
+    <h1>!!!! 당첨 !!!!</h1>
+
+    <div id="finalResult" class="final-result"></div>
+
+    <div class="button-group">
+        <button id="retryBtn" class="sub-btn">다시 돌리기</button>
+        <button id="resetBtn" class="sub-btn">처음으로</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

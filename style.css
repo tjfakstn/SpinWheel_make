@@ -1,0 +1,136 @@
+body {
+    background: #fafafa;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.step.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: clamp(20px, 2.8vw, 32px);
+    margin-bottom: 25px;
+}
+
+/* STEP1 개수 조절 */
+#countControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: min(4vw, 25px);
+    margin-bottom: 25px;
+}
+
+#countControl button {
+    width: clamp(45px, 8vw, 70px);
+    height: clamp(45px, 8vw, 70px);
+    font-size: clamp(20px, 4vw, 32px);
+    background: #3a82f7;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+#itemCount {
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: bold;
+}
+
+.main-btn {
+    padding: 12px clamp(20px, 4vw, 40px);
+    font-size: clamp(16px, 2.3vw, 22px);
+    background: #ff7675;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* STEP2 버튼 */
+.step2-buttons,
+.button-group {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: min(4vw, 40px);
+}
+
+.step2-buttons button,
+.button-group button {
+    padding: 14px clamp(25px, 6vw, 45px);
+    font-size: clamp(14px, 2vw, 20px);
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+#backBtn {
+    background: #636e72;
+}
+#spinBtn {
+    background: #ff7675;
+}
+
+/* STEP3 버튼 동일 반응형 */
+#retryBtn {
+    background: #636e72;
+}
+#resetBtn {
+    background: #ff7675;
+}
+
+/* 반응형 룰렛 컨테이너 */
+#wheelContainer {
+    position: relative;
+    margin: 0 auto;
+    width: min(80vw, 450px);
+    height: min(80vw, 450px);
+}
+
+/* 라벨 컨테이너 → canvas 크기에 맞춰 변경됨 */
+#labelsContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* 입력칸 */
+.labelInput {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+}
+
+.labelInput input {
+    width: clamp(70px, 22%, 140px);
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: clamp(12px, 1.5vw, 16px);
+    text-align: center;
+}
+
+/* canvas 자체 반응형 */
+canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.12);
+    margin-top: 10px;
+}
+
+/* 결과 텍스트 */
+.final-result {
+    font-size: clamp(26px, 3vw, 40px);
+    font-weight: bold;
+    margin-top: 30px;
+}
