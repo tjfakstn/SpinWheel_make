@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -23,8 +23,9 @@ jobs:
       - name: Build EXE
         run: npm run make
 
-      - name: Upload EXE to artifacts
-        uses: actions/upload-artifact@v3
+      - name: Upload EXE Artifact
+        uses: actions/upload-artifact@v4
         with:
           name: spinwheel-windows
           path: out/make/**
+          if-no-files-found: error
